@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>vflare.net — Bright. Fast. Visible.</title>
+  <meta name="description" content="vflare.net — Smart analytics and real-time insights for your web presence.">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#ff6b6b;--muted:#9aa4b2;--glass: rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#071021 0%,var(--bg) 100%);-webkit-font-smoothing:antialiased}
+    .container{max-width:1100px;margin:40px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:700;color:white}
+    .logo-mark{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#ff8a8a,#ff6b6b);display:flex;align-items:center;justify-content:center;color:#081022;font-weight:800}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center;margin-top:36px}
+    .hero h1{font-size:38px;margin:0 0 12px;color:white;line-height:1.05}
+    .hero p{margin:0 0 22px;color:var(--muted);font-size:15px}
+    .cta-row{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:var(--accent);color:white;box-shadow:0 6px 18px rgba(255,107,107,0.15)}
+    .btn-ghost{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:18px;box-shadow:0 6px 20px rgba(2,6,23,0.6);color:var(--muted)}
+    .stats{display:flex;gap:12px;justify-content:space-between;margin-top:18px}
+    .stat{background:var(--glass);padding:12px;border-radius:10px;text-align:center}
+    .stat b{display:block;color:white;font-size:18px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+    .feature{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.008));padding:18px;border-radius:12px}
+    footer{margin-top:48px;color:var(--muted);text-align:center;padding:18px 0}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.features{grid-template-columns:1fr 1fr}.stats{flex-direction:column}.container{margin:20px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="logo-mark">V</div>
+        <div>
+          <div style="font-size:16px">vflare.net</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Bright. Fast. Visible.</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Make your data visible — in real time.</h1>
+        <p>vflare.net helps teams turn event streams and analytics into instantly actionable insights. Lightweight integration, instant dashboards, and alerts that actually mean something.</p>
+        <div class="cta-row">
+          <button class="btn btn-primary" onclick="location.href='#contact'">Get started — it's free</button>
+          <button class="btn btn-ghost" onclick="location.href='#features'">See features</button>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <small>Events processed</small>
+            <b>120M+</b>
+          </div>
+          <div class="stat">
+            <small>Median alert time</small>
+            <b>1.2s</b>
+          </div>
+          <div class="stat">
+            <small>Trusted by</small>
+            <b>250+</b>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3 style="margin-top:0;color:white">Live demo</h3>
+        <p style="margin:6px 0 14px">A fast snapshot of your key metric. Replace this area with a live embed, animated screenshot, or getting-started steps.</p>
+        <div style="display:flex;gap:8px;flex-direction:column">
+          <div style="background:linear-gradient(90deg,#071426,#0b1830);padding:12px;border-radius:10px;color:#cfe8ff;font-family:monospace;font-size:13px">requests: 8,421 / min</div>
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-primary" style="flex:1" onclick="alert('Demo: coming soon')">Try demo</button>
+            <button class="btn btn-ghost" style="flex:1" onclick="location.href='#contact'">Contact sales</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="features" class="features">
+      <div class="feature">
+        <h4 style="margin:0 0 8px;color:white">Real-time pipelines</h4>
+        <p style="margin:0;font-size:14px;color:var(--muted)">Stream processing built to scale — low overhead, quick results.</p>
+      </div>
+      <div class="feature">
+        <h4 style="margin:0 0 8px;color:white">Smart alerts</h4>
+        <p style="margin:0;font-size:14px;color:var(--muted)">Meaningful notifications with noise suppression and contextual details.</p>
+      </div>
+      <div class="feature">
+        <h4 style="margin:0 0 8px;color:white">Dashboards & embeds</h4>
+        <p style="margin:0;font-size:14px;color:var(--muted)">Quick embeds for product pages, admin consoles, or status sites.</p>
+      </div>
+    </section>
+
+    <section style="margin-top:34px" id="pricing">
+      <div class="card">
+        <h3 style="margin-top:0;color:white">Simple pricing</h3>
+        <p style="margin:6px 0 14px;color:var(--muted)">Start free. Scale when you need to. Pricing based on throughput and retention.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <div class="card" style="flex:1;min-width:220px">
+            <h4 style="margin:0 0 6px;color:white">Starter</h4>
+            <p style="margin:0 0 10px;color:var(--muted)">Great for prototypes and small teams.</p>
+            <b>Free</b>
+          </div>
+          <div class="card" style="flex:1;min-width:220px">
+            <h4 style="margin:0 0 6px;color:white">Growth</h4>
+            <p style="margin:0 0 10px;color:var(--muted)">For scaling applications and production traffic.</p>
+            <b>Contact sales</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <div class="card">
+        <h3 style="margin-top:0;color:white">Get in touch</h3>
+        <p style="margin:6px 0 12px;color:var(--muted)">Questions? Want a pilot or custom demo? Drop us a line.</p>
+        <form onsubmit="event.preventDefault(); alert('Thanks — we\'ll be in touch!')">
+          <div style="display:flex;gap:8px;flex-direction:column">
+            <input type="text" name="name" placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:white">
+            <input type="email" name="email" placeholder="Email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:white">
+            <textarea name="message" rows="4" placeholder="Tell us what you need" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:white"></textarea>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-primary" type="submit">Send message</button>
+              <button class="btn btn-ghost" type="button" onclick="location.href='#'">Privacy</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <small>© <span id="year"></span> vflare.net · Built with clarity.</small>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
