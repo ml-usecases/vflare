@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Privacy Policy | Transaction Checker</title>
+  <meta name="description" content="How Transaction Checker accesses, uses, stores, and shares personal and Google user data.">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#ff6b6b;--muted:#9aa4b2}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#071021 0%,var(--bg) 100%);-webkit-font-smoothing:antialiased}
+    .container{max-width:900px;margin:40px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:700;color:white}
+    .logo-mark{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#ff8a8a,#ff6b6b);display:flex;align-items:center;justify-content:center;color:#081022;font-weight:800}
+    nav a,footer a{color:var(--muted);text-decoration:none}
+    nav a:hover,footer a:hover{color:white}
+    main{margin-top:36px;padding:28px;border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    h1,h2{color:white}
+    h1{font-size:36px;margin-top:0}
+    h2{font-size:20px;margin-top:30px}
+    p,li{color:var(--muted);line-height:1.7}
+    a{color:#ffaaaa}
+    footer{margin-top:32px;padding:18px 0;color:var(--muted);text-align:center}
+    @media(max-width:600px){.container{margin:16px auto;padding:18px}main{padding:22px}h1{font-size:30px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="logo-mark" aria-hidden="true">V</div>
+        <div>vflare.net</div>
+      </div>
+      <nav><a href="index.html">Transaction Checker</a></nav>
+    </header>
+
+    <main>
+      <h1>Privacy Policy</h1>
+      <p><strong>Effective date: November 10, 2026</strong></p>
+      <p>This policy explains how Transaction Checker, a private budget-review tool operated by the owner of vflare.net, accesses and handles information. The tool is not offered as a public account service.</p>
+
+      <h2>Information accessed</h2>
+      <p>When authorized, the tool uses Google OAuth to access the owner's Google account. It requests Google Drive access, read-only access to Google Sheets, and basic account identity scopes. The Drive permission requested by Google is broad and may allow access to files beyond the budget folder. In normal operation, the tool's code reads CSV files under the configured budget folder (or its inbox folder, when present), and reads the Categories, Rules, and One-offs tabs of the configured rules spreadsheet. Google enforces the granted permission; the folder filtering is implemented by the tool.</p>
+      <p>The tool processes bank transaction data in those CSV exports and, through the Starling API, transactions from the owner's joint account and limited transfer-matching information from the owner's individual account. The data may include transaction dates, amounts, descriptions, account names, and categorization rules.</p>
+
+      <h2>How information is used</h2>
+      <p>Information is used only to categorize and reconcile transactions, create or update a budget workbook, identify unmatched transactions for review, and maintain alert state so the same item is not repeatedly reported as new. Google account identity is used to authorize the Google API connection.</p>
+      <p>When new items need review, the tool sends a generic notification email to its configured recipient. Email alerts do not include transaction details; they include a link to the relevant Google Drive reports.</p>
+
+      <h2>Storage and retention</h2>
+      <p>Source exports and the rules spreadsheet remain in the owner's Google Drive. The tool creates or updates the budget workbook, unmatched-transaction CSV reports, and alert-state files in that Drive folder. Alert-state files contain transaction identifiers in hashed form. The tool does not automatically delete source files or generated Drive files; the owner controls their retention and can delete them from Drive.</p>
+      <p>For scheduled runs, OAuth credentials and other configuration secrets are provided to GitHub Actions to run the private workflow. The tool does not intentionally write transaction details to workflow logs. Email providers retain messages according to their own settings and policies. Any local copies created or downloaded by the owner are under the owner's control.</p>
+
+      <h2>Sharing</h2>
+      <p>Transaction data is not sold, used for advertising, or shared for unrelated purposes. Data is transmitted to the services needed to operate the tool: Google Drive and Sheets for the owner's files, Starling for account transactions, GitHub Actions to run the scheduled workflow, and the configured email service for generic alerts. Those providers process information under their own terms and privacy policies. The owner may access the data through their Google Drive and email accounts.</p>
+
+      <h2>Security and choices</h2>
+      <p>Access depends on OAuth credentials and workflow secrets. No internet transmission or storage method is completely secure. The owner can stop future Google API access by revoking Transaction Checker's access in their Google Account security settings, disable the scheduled workflow, remove its GitHub Actions secrets, and delete files and reports from Google Drive. Revoking access does not itself delete files already stored in Drive or copies retained by service providers.</p>
+
+      <h2>Changes and contact</h2>
+      <p>This policy may be updated when the tool's data practices change. Questions about this policy or requests concerning information handled by the tool can be sent to <a href="mailto:uijnbh@gmail.com">uijnbh@gmail.com</a>.</p>
+      <p>For information about Google's handling of data, see the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+    </main>
+
+    <footer><small><a href="index.html">Transaction Checker</a> · vflare.net</small></footer>
+  </div>
+</body>
+</html>
